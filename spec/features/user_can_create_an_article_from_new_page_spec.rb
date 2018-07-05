@@ -3,7 +3,7 @@ require 'rails_helper'
 describe 'a visitor' do
   describe 'visits /articles/new' do
     it 'and can create a new article in the database' do
-      article_1 = Article.create!(title: 'Title 1', body: 'Body 1')
+      article = Article.create!(title: 'Title 1', body: 'Body 1')
 
       visit articles_path
       click_link 'Create a New Article'
