@@ -10,8 +10,8 @@ describe 'a visitor' do
       click_link 'Delete'
 
       expect(current_path).to eq(articles_path)
+      expect(page).to have_content("Article '#{article_2.title}' deleted.")
       expect(page).to have_content(article_1.title)
-      expect(page).to_not have_content(article_2.title)
     end
   end
 end
