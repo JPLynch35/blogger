@@ -7,5 +7,7 @@ describe Article, type: :model do
   end
   describe 'relationships' do
     it {should have_many(:comments)}
+    it {should have_many(:taggings)}
+    it {should have_many(:tags).through(:taggings)}
   end
 end
