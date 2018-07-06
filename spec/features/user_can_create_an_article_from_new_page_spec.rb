@@ -14,6 +14,7 @@ describe 'a visitor' do
       fill_in 'article[body]', with: 'New Body!'
       fill_in 'article[tag_list]', with: 'ruby, technology'
       click_on 'Create Article'
+
       expect(page).to have_content("Article 'New Title!' created.")
       expect(page).to have_content('New Title!')
       expect(page).to have_content('New Body!')
